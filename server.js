@@ -34,7 +34,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser());
 
-app.post("/", async (req, res) => {
+app.get("/", async (req, res) => {
   res.redirect("./custsignin.html");
 });
 
