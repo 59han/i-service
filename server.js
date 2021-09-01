@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
 const salt = bcrypt.genSaltSync(10);
+const path = require("path");
 mongoose.connect("mongodb://localhost:27017/deakinDB", {
   useNewUrlParser: true,
 });
@@ -32,6 +33,10 @@ const AccountModel = mongoose.model("Account", AccountSchema);
 const app = express();
 app.use(express.static("public"));
 app.use(bodyParser());
+
+app.post("/", async (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./public/custsignin.html"));
+});
 
 app.post("/accounts", async (req, res) => {
   try {
