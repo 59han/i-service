@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Customer Registration</h1>
+      <h3>Create an iService Account</h3>
+      <form id="form" action="/accounts" method="POST">
+        <p>Country of residence*</p>
+        <select
+          class="form-select"
+          name="country"
+          aria-label="Default select example"
+          required
+        >
+          <option selected value="">Choose from list</option>
+          <option value="USA">USA</option>
+          <option value="CAN">CAN</option>
+          <option value="CN">CN</option>
+          <option value="AUS">AUS</option>
+        </select>
+        <div class="name-wrapper input-wrapper">
+          <div>
+            <p>First name*</p>
+            <input required type="text" class="form-control" name="firstName" />
+          </div>
+          <div>
+            <p>Last name*</p>
+            <input required type="text" class="form-control" name="lastName" />
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <p>Email*</p>
+          <input required type="email" class="form-control" name="email" />
+        </div>
+        <div class="input-wrapper">
+          <p>Password*</p>
+          <input
+            required
+            type="password"
+            class="form-control"
+            name="password"
+          />
+        </div>
+        <div class="input-wrapper">
+          <p>Confirm Password*</p>
+          <input
+            required
+            type="password"
+            class="form-control"
+            name="confirmPassword"
+          />
+        </div>
+        <div class="input-wrapper">
+          <p>Address*</p>
+          <textarea
+            name="address"
+            class="form-control"
+            cols="30"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <div class="name-wrapper input-wrapper">
+          <div>
+            <p>City*</p>
+            <input required type="text" class="form-control" name="city" />
+          </div>
+          <div>
+            <p>State, Province or Region*</p>
+            <input required type="text" class="form-control" name="region" />
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <p>ZIP / Postal code</p>
+          <input type="text" class="form-control" name="postalCode" />
+        </div>
+        <div class="input-wrapper">
+          <p>Mobile Phone number</p>
+          <input type="number" class="form-control" name="phone" />
+        </div>
+        <div class="input-wrapper">
+          <button type="submit" class="btn btn-success">Create Account</button>
+          <a href="./custsignin.html" class="login-btn"
+            ><button type="button" class="btn btn-light">Login</button></a
+          >
+        </div>
+      </form>
+    </div>
+    <script>
+      const search = location.search;
+      const message = search.split("=")[1];
+      if (message) {
+        alert(decodeURIComponent(message));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: inline-block;
+  margin: 30px 30px;
+}
+.wrapper > h1 {
+  font-weight: bold;
+}
+.wrapper > h1,
+h3 {
+  color: #55aa66;
+}
+.wrapper > form > p {
+  font-size: 20px;
+}
+.input-wrapper {
+  margin-top: 15px;
+}
+.name-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.name-wrapper > * {
+  width: 45%;
+}
+.login-btn {
+  margin-left: 1vw;
+}
