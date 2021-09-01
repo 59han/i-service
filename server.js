@@ -67,6 +67,4 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log("please visit http://localhost:3001");
-});
+app.listen(process.env.PORT);
