@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
 const salt = bcrypt.genSaltSync(10);
-const path = require("path");
+
 mongoose.connect(
   "mongodb+srv://qwer1234:qwer1234@cluster0.xa6fp.mongodb.net/deakinDB",
   {
@@ -38,7 +38,7 @@ app.use(express.static("public"));
 app.use(bodyParser());
 
 app.get("/", async (req, res) => {
-  req.redirect("./custsignin.html");
+  res.redirect("./custsignin.html");
 });
 
 app.post("/accounts", async (req, res) => {
