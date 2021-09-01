@@ -35,7 +35,7 @@ app.use(express.static("public"));
 app.use(bodyParser());
 
 app.post("/", async (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./public/custsignin.html"));
+  res.redirect("./custsignin.html");
 });
 
 app.post("/accounts", async (req, res) => {
