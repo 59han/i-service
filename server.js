@@ -5,9 +5,12 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
 const salt = bcrypt.genSaltSync(10);
 const path = require("path");
-mongoose.connect("mongodb://localhost:27017/deakinDB", {
-  useNewUrlParser: true,
-});
+mongoose.connect(
+  "mongodb+srv://qwer1234:qwer1234@cluster0.xa6fp.mongodb.net/deakinDB",
+  {
+    useNewUrlParser: true,
+  }
+);
 
 const AccountSchema = new mongoose.Schema({
   firstName: String,
@@ -72,4 +75,4 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3001);
